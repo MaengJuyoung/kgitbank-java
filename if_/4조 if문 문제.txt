@@ -1,0 +1,148 @@
+문제1.
+1에서부터 6까지의 눈을 가진 주사위를 두명이서 굴려서 승자를 정하는 게임
+두명이 본인의 [이름]과 [주사위 수]를 입력 
+출력 ex) [이름]님 승리
+    	 [이름]님 승리
+    	 무승부 
+    	 1~6 사이의 숫자만 입력해주세요
+
+문제2. 
+국어, 영어, 수학 점수를 입력하여 평균 점수와 등급을 출력하는 프로그램을 작성하시오.
+단,  평균이 100점 초과이거나, 0점 미만인 경우 "잘못입력하셨습니다."를 출력하도록 작성하시오.
+(A:90점 이상, B:90점 미만 80점 이상, C:80점 미만 70점 이상, D:70점 미만 60점 이상, F:60점 미만)
+출력 ex ) 
+국어, 영어, 수학 점수를 입력하세요 > 
+95 90 85
+평균 점수는 90점이며, 등급은 A입니다.
+
+문제3.
+두 명이 가위, 바위, 보를 입력하여 결과를 출력하는 프로그램을 작성하시오.
+단, 가위, 바위, 보가 아닌 것을 입력하면 "잘못입력하셨습니다." 출력
+출력 ex )
+첫번째 사람 가위 바위 보 입력 :
+가위
+두번째 사람 가위 바위 보 입력 :
+바위
+두번째 사람 승
+
+
+
+[1번 문제 풀이]
+package if_;
+
+import java.util.Scanner;
+
+public class Quiz5 {
+   public static void main(String[] args) {
+      int n1, n2;
+      String h1, h2;
+      Scanner sc = new Scanner(System.in);
+      System.out.print("첫번쨰 이름 입력, 주사위 1~6자리중 입력 : ");
+      h1 = sc.next();
+      n1 = sc.nextInt();
+      
+      System.out.print("두번쨰 이름 입력, 주사위 1~6자리중 입력 : ");
+      h2 = sc.next();
+      n2 = sc.nextInt();
+
+      if ((1 > n1)||(n1 > 6)||(1 > n2)||(n2 > 6)) {
+         System.out.println("1~6 사이의 숫자만 입력해주세요");
+      }else if(n1 > n2) {
+         System.out.println(h1 + " 승리");
+      }else if (n1 < n2) {
+         System.out.println(h2 + " 승리");
+      }else {
+         System.out.println("무승부");
+      }
+   }
+}
+
+
+[2번 문제 풀이]
+package if_;
+
+import java.util.Scanner;
+
+public class quiz00 {
+	public static void main(String[] args) {
+		// 국어, 영어, 수학 점수를 입력하여 평균 점수와 등급을 출력하는 프로그램을 작성하시오.
+		// 단, 평균이 100점 초과이거나, 0점 미만인 경우 "잘못입력하셨습니다."를 출력하도록 작성
+		// A:90점 이상, B:90점 미만 80점 이상, C:80점 미만 70점 이상, D:70점 미만 60점 이상, F:60점 미만
+		// 출력 예) 평균 점수는 90점이며, 등급은 A입니다.
+		int kor, eng, mat, sum, avg;
+		char grade;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("국어, 영어, 수학 점수를 입력하세요 > ");
+		kor = sc.nextInt();
+		eng = sc.nextInt();
+		mat = sc.nextInt();
+		sum = kor+eng+mat;
+		avg = sum/3;
+		
+		if (avg>100 || avg<0) {
+			System.out.println("잘못입력하셨습니다.");
+		}else if (avg>=90) {
+			System.out.println("평균 점수는 "+avg+"이며, 등급은 A입니다.");
+		}
+		else if (avg>=80) {
+			System.out.println("평균 점수는 "+avg+"이며, 등급은 B입니다.");
+		}
+		else if (avg>=70) {
+			System.out.println("평균 점수는 "+avg+"이며, 등급은 C입니다.");
+		}
+		else if (avg>=60) {
+			System.out.println("평균 점수는 "+avg+"이며, 등급은 D입니다.");
+		}else {
+			System.out.println("평균 점수는 "+avg+"이며, 등급은 F입니다.");
+		}
+	}
+}
+
+
+[3번 문제 풀이]
+package if_;
+
+import java.util.Scanner;
+
+public class test05 {
+   public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      String result1, result2 ;
+
+
+      System.out.println("첫번째 사람 가위 바위 보 입력 :");
+      result1 = sc.next();
+      System.out.println("두번째 사람 가위 바위 보 입력 :");
+      result2 = sc.next();
+
+
+
+      if(("가위".equals(result2) || "바위".equals(result2) || "보".equals(result2))
+            && ("가위".equals(result1) || "바위".equals(result1) || "보".equals(result1))){
+         if(result1.equals(result2)) {
+            System.out.println("무승부");
+         }else if("가위".equals(result1)){
+            if("보".equals(result2)) {
+               System.out.println("첫번째 사람 승");
+            }else {
+               System.out.println("두번째 사람 승");
+            }
+         }else if("바위".equals(result1)){
+            if("가위".equals(result2)) {
+               System.out.println("첫번째 사람 승");
+            }else {
+               System.out.println("두번째 사람 승");
+            }
+         }
+         else if("보".equals(result1)){
+            if("바위".equals(result2)) {
+               System.out.println("첫번째 사람 승");
+            }else {
+               System.out.println("두번째 사람 승");
+            }
+         }
+      } else {
+         System.out.println("잘못 입력하셨습니다.");
+      }
+   }
+}
