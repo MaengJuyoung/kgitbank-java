@@ -1,0 +1,235 @@
+문제1번) 
+점수를 입력받아 80점 이상이면 합격메세지를 그렇지 않으면 
+불합격 메세지를 출력하는 작업을 반복하다가
+0에서 100점 이외의 점수가 입력되면 종료하는 프로그램
+
+문제 2번)
+숫자를 입력받아서 그 값이 짝수면 덧셈을, 홀수면 뺄셈을 진행하는 프로그램을 만듭니다.
+
+입력받는 숫자는 1~20사이의 값이고 100이되면 종료됩니다.
+더해지거나 뺀 값은 0미만, 100초과가 될 수 없습니다.
+
+출력 예시 :
+----------------------------
+현재 숫자는 0 입니다.
+숫자를 입력하세요 : 20
+
+숫자를 더합니다.
+
+현재 숫자는 20 입니다.
+숫자를 입력하세요 : 19
+
+숫자를 뺍니다.
+
+현재 숫자는 1 입니다.
+숫자를 입력하세요 : 3
+
+합계는 0이하로 내려갈 수 없습니다. 다시 입력해주세요
+
+현재 숫자는 1 입니다.
+숫자를 입력하세요 : 
+---------------------------
+
+문제3번)
+아래와 같은 모양을 만드세요
+
+*****
+****
+***
+**
+*
+========
+
+
+
+문제4번
+
+
+int형 양수 범위 숫자를 입력하였을 경우 각 자릿수의 합을 구하세요.
+
+반복해서 동작하다 입력값에 0이 들어가면 프로그램이 종료됩니다.
+
+입력           출력
+
+11               2 
+111              3
+1111            4
+11111           5
+895              22
+222222222     18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------
+1번 답)
+package day04;
+
+import java.util.Scanner;
+
+public class practice02 {
+public static void main(String[] args) {
+	
+	Scanner input = new Scanner(System.in);
+
+	while(true)
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.print("점수를 입력하세요. : ");
+		int scr = input.nextInt();
+
+		if( scr <= 0 || scr >= 100)
+		{
+			break;
+		}
+		else if( scr>=80)
+		{
+			System.out.println("축하합니다. 합격입니다.");
+		}
+		else
+		{
+			System.out.println("죄송합니다. 불합격입니다.");
+		}
+	}
+}
+}
+
+
+2번 답)
+Scanner sc = new Scanner(System.in);
+		int total = 0;
+		boolean finish = true;
+		
+		while (finish) {
+			System.out.println("현재 숫자는 " + total + " 입니다.");
+			System.out.print("숫자를 입력하세요 : ");
+			int num = sc.nextInt();
+			if (num >= 1 && num <= 20) {
+				if (num %2 == 0) {
+					total = total + num;
+					if (total == 100) {
+						System.out.println("100이 되었습니다. 종료합니다.");
+						finish = false;
+					} else if (total <= 100) {
+						System.out.println();
+						System.out.println("숫자를 더합니다.");
+						System.out.println();
+					} else {
+						total = total - num;
+						System.out.println();
+						System.out.println("숫자가 100을 초과합니다. 다시 입력해주세요");
+						System.out.println();
+					}
+				} else {
+					total = total - num;
+					if (total < 0) {
+						total = total + num;
+						System.out.println();
+						System.out.println("합계는 0이하로 내려갈 수 없습니다. 다시 입력해주세요");
+						System.out.println();
+					} else {
+						System.out.println();
+						System.out.println("숫자를 뺍니다.");
+						System.out.println();
+					}
+				} 
+			} else {
+				System.out.println();
+				System.out.println("1~20 사이의 숫자를 입력해주세요");
+				System.out.println();
+			}
+		}
+
+3번 답)
+package for_;
+
+import java.util.Scanner;
+
+public class quiz02 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i = 1 ; i < 6 ; i++ ) {
+			for(int j = 1 ; j < 7-i ; j++ ) {
+			System.out.print("*");
+		}
+		System.out.println();
+	}
+		System.out.println("==========");
+	}
+}	
+
+4번 답)
+
+
+package for_;
+
+import java.util.Scanner;
+
+public class ex_04 {
+
+	public static void main(String[] args) {
+		
+		int num;
+	
+		Scanner s = new Scanner(System.in);
+		
+		while(true)
+		{
+			num = s.nextInt();
+			
+			int sum = 0;
+			int temp = num;
+			
+			
+			if(num == 0)
+				break;
+			while(true)
+			{
+				int ten = 10;
+				
+				if(temp > 0)
+				{
+					sum += temp % ten; 
+					temp -= temp % ten; 
+					temp = temp / 10;	
+				}
+				else
+				{
+					break;
+				}
+			}
+			
+			System.out.println(sum);
+			
+		}
+		
+	}
+
+}
+
