@@ -1,0 +1,108 @@
+문제 1) 배열 int asd [] = [{1,2,3},{4,5,6},{7,8,9}]을 만든후, 랜덤으로 세 숫자를 출력 후, 
+짝수인지 홀수인지 판단하여 출력
+* Random rand = new Random()
+  a1 = rand.nextInt(3);
+ex)
+짝수 => 8
+홀수 => 5
+짝수 => 2
+or
+홀수 => 1
+홀수 => 5
+짝수 => 4
+
+
+
+문제 2)// 크기 5인 배열을 생성하여 숫자 5개를 입력받은 후, 
+      // 5개의 숫자를 오름차순으로 정리하시오. 
+      // 출력 예) 132 -64 54 3 21 
+      //       작은 수부터 출력 : -64 3 21 54 132
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. 답)
+package while_;
+
+import java.util.Random;
+
+public class myself {
+	public static void main(String[] args) {
+		int a1, a2;
+		Random rand = new Random();
+		int arr [][]= {{1,2,3},{4,5,6},{7,8,9}};
+		
+		for (int i = 1; i <= 3; i++) {
+			a1 = rand.nextInt(3);
+			a2 = rand.nextInt(3);
+			if (arr[a1][a2] % 2 == 0) {
+				System.out.println("짝수 => " + arr[a1][a2]);
+			}else {
+				System.out.println("홀수 => " + arr[a1][a2]);
+			}
+		}
+	}
+}
+
+
+
+2. 답)
+     Scanner sc = new Scanner(System.in);
+      int arr[] = new int[5];
+      
+      System.out.print("숫자 다섯 개를 입력하세요 >>> ");
+      for (int i=0; i<5; i++) {
+         arr[i] = sc.nextInt();
+      }
+
+      // 입력받은 수를 작은 순서대로 넣기
+        for (int i=0; i<arr.length; i++) {
+            for (int j=i+1; j<arr.length; j++) {
+                if (arr[i]>arr[j]) {
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+
+        // 결과값 출력
+        System.out.print("작은 수부터 출력 : ");
+        for (int i=0; i<5; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
