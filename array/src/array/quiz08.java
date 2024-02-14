@@ -19,6 +19,15 @@ public class quiz08 {
 		for (int i=0; i<5; i++) {
 			arr[i] = sc.nextInt();
 		}
-		
+		for (int i=0; i<arr.length; i++) {
+            for (int j=i+1; j<arr.length; j++) {
+                if (arr[i]<arr[j]) {
+                    int tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+            System.out.println(i+1 + "번째 : " + arr[i]);
+        }
 	}
 }
