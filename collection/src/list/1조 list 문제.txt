@@ -1,0 +1,307 @@
+문제1)
+lotto당첨번호를 나오게 만드시요!
+
+ArrayList<Integer> lotto = new ArrayList(); //선택된 숫자 저장
+ArrayList<Integer> balls = new ArrayList(); //공45개 저장하는 리스트>44>43>
+//1.balls리스트에 1~45숫자를 추가한다.
+
+//2. balls 리스트에서 뽑을 인덱스를 난수 0~44 ->0~43..0~39범위에서 반복합니다.
+  2-0 Random 사용
+//2-1. 난수 인덱스에 해당하는 요소를 로또 리스트에 추가합니다
+//2-2 뽑힌 난수 인덱스의 요소는 삭제(제거)합니다.
+
+//3.최종 로또 변수가 참조하는 값을 출력합니다.
+3-1.lotto.sort(null); 사용 (메소드로 오름차순 정렬한다)
+
+
+출력값
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44]
+뽑은 번호 :[3, 21, 22, 25, 28, 44]
+
+
+
+
+
+
+문제2)
+사용자에게 5번입력 받고  5번입력받은 문자열들을 붙여서 한번에 출력하세요 (String 클래스의 .concat() 이용)
+
+
+
+
+
+
+문제3).
+유저 관리 프로그램
+1.유저 정보 입력
+2.유저 정보 검색
+3.유저 정보 수정
+4.유저 정보 삭제
+5.종료
+선택해주세요 :1
+
+
+1번선택 시 :
+이름 입력:
+김
+아이디 입력:
+1
+패스워드 입력:
+2
+나이 입력:
+3
+주소 입력:
+4
+
+2번 선택 시 :
+선택해주세요 :2
+이름검색 시 영어는 대소문자 구별 안함
+이름검색김
+이름:김
+아이디:1
+패스워드:2
+나이:3
+주소:4
+
+검색 후 정상적으로 데이터가 나와야됨
+
+3번 선택 시
+선택해주세요 :3
+이름검색 시 영어는 대소문자 구별 안함
+이름검색김
+이름 입력:
+안
+아이디 입력:
+녕
+패스워드 입력:
+하
+나이 입력:
+세
+주소 입력:
+요
+유저 관리 프로그램
+1.유저 정보 입력
+2.유저 정보 검색
+3.유저 정보 수정
+4.유저 정보 삭제
+5.종료
+선택해주세요 :2
+이름검색 시 영어는 대소문자 구별 안함
+이름검색안
+이름:안
+아이디:녕
+패스워드:하
+나이:세
+주소:요
+
+데이터 변경 후 변경 된 것 확인
+
+4번 선택시
+
+유저 관리 프로그램
+1.유저 정보 입력
+2.유저 정보 검색
+3.유저 정보 수정
+4.유저 정보 삭제
+5.종료
+선택해주세요 :4
+이름검색 시 영어는 대소문자 구별 안함
+이름검색안
+안님 정보가 삭제되었습니다.
+
+
+5번은 그냥 종료 되면 됨
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.package list;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class quiz02 {
+public static void main(String[] args) {
+	ArrayList<Integer> lotto = new ArrayList(); //선택된 숫자 저장
+	ArrayList<Integer> balls = new ArrayList(); //공45개 저장하는 리스트>44>43>
+	//1.balls리스트에 1~45숫자를 추가한다.
+	for(int i=1;i<45;i++)
+		balls.add(i);
+	//확인:출력해보기
+	System.out.println(balls);
+	
+	//2. balls 리스트에서 뽑을 인덱스를 난수 0~44 ->0~43..0~39범위에서 반복합니다.
+	Random r= new Random();
+	int k;
+	for(int i=0;i<6;i++) {
+		k=r.nextInt(45-i);
+		//2-1. 난수 인덱스에 해당하는 요소를 로또 리스트에 추가홥니다.
+		lotto.add(balls.get(k));
+		//2-2 뽑힌 난수 인덱스의 요소는 삭제(제거)합니다.
+		balls.remove(k);
+	}
+	//3.최종 로또 변수가 참조하는 값을 출력합니다.
+	lotto.sort(null);
+	System.out.println("뽑은 번호 :"+lotto);
+	
+	//ArrayList의 중요 메소드 : size(),add(),get(),remove()
+}
+}
+
+2.
+package java0206;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Solution6 {
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		ArrayList<String> arr=new ArrayList<String>();
+		
+		int i=1;
+		String temp="";
+		
+		while (true) {
+			System.out.print("enter["+i+"]:" );
+			String str=scan.next();
+			arr.add(str);
+			if(i==5) {
+				break;
+			}
+			i++;
+			
+		}
+		for (int j=0;j<arr.size();j++) {
+			
+			String concatStr=temp.concat(arr.get(j));
+
+			temp=concatStr;
+			
+		}
+		scan.close();
+		System.out.println(temp);
+		
+	}
+	
+
+}
+
+3.
+package list;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class quizx {
+	public static void main(String[] args) {
+		/*
+		 사용자에게 아이디 패스워드 이름 나이 주소를 입력받고
+		 입력받은 값의 정보를 수정하고 저장하는 프로그램을 생성해라.
+		 * */
+		ArrayList<String> arr = new ArrayList<>();
+		Scanner input = new Scanner(System.in);
+		int count=0;
+		while(true) {
+		System.out.println("유저 관리 프로그램");
+		System.out.println("1.유저 정보 입력");
+		System.out.println("2.유저 정보 검색");
+		System.out.println("3.유저 정보 수정");
+		System.out.println("4.유저 정보 삭제");
+		System.out.println("5.종료");
+		System.out.print("선택해주세요 :");
+		int select= input.nextInt();
+		if(select==5)break;//만약 5번을 선택하면 프로그램 종료
+		switch (select) {
+		case 1 : {//유저 정보 입력
+			while(true) {
+				System.out.println("이름 입력:");
+				arr.add(input.next());
+				System.out.println("아이디 입력:");
+				arr.add(input.next());
+				System.out.println("패스워드 입력:");
+				arr.add(input.next());
+				System.out.println("나이 입력:");
+				arr.add(input.next());
+				System.out.println("주소 입력:");
+				arr.add(input.next());
+				count +=1;
+				break;
+			}
+			break;
+			
+		}
+		case 2 : {//유저 정보 검색
+			while(true) {
+				
+				System.out.println("이름검색 시 영어는 대소문자 구별 안함");
+				System.out.print("이름검색");
+				String name = input.next();
+					if(arr.contains(name)) {
+						int index=arr.indexOf(name);
+						System.out.println(
+								"이름:"+arr.get(index)+
+								"\n아이디:"+arr.get(index+1)+
+								"\n패스워드:"+arr.get(index+2)+
+								"\n나이:"+arr.get(index+3)+
+								"\n주소:"+arr.get(index+4));
+					}else {
+				
+				System.out.println("이름이 존재하지 않습니다.");
+					}
+					break;
+			}
+			break;
+		}
+		case 3 : {//유저 정보 수정
+			System.out.println("이름검색 시 영어는 대소문자 구별 안함");
+			System.out.print("이름검색");
+			String name = input.next();
+				if(arr.contains(name)) {
+					int index=arr.indexOf(name);	
+					System.out.println("이름 입력:");
+					arr.set(index,input.next());
+					System.out.println("아이디 입력:");
+					arr.set(index+1,input.next());
+					System.out.println("패스워드 입력:");
+					arr.set(index+2,input.next());
+					System.out.println("나이 입력:");
+					arr.set(index+3,input.next());
+					System.out.println("주소 입력:");
+					arr.set(index+4,input.next());
+				
+			}else {
+				System.out.println("이름이 존재하지 않습니다.");
+			}
+				
+			break;
+		}
+		case 4 : {//유저 정보 삭제
+			System.out.println("이름검색 시 영어는 대소문자 구별 안함");
+			System.out.print("이름검색");
+			String name = input.next();
+			if(arr.contains(name)) {
+				int index=arr.indexOf(name);
+				String a=arr.get(index);
+				for(int i=0;i<5;i++) {
+				arr.remove(index);
+				}
+				System.out.println(a+"님 정보가 삭제되었습니다.");
+			}
+			
+		}
+		}
+		}
+	}
+}
+
