@@ -19,7 +19,7 @@ public class quiz06_2 {
 		int count=0;
 		for (int i=0; i<5; i++) {
 			String names = name.get(i); // 배열의 값(이름)을 변수에 저장
-            if (names.startsWith("김")) { // 만약 "김"으로 시작한다면, 
+            if (names.startsWith("김")) { // 만약 "김"으로 시작한다면, 		// startsWith
                 count++; // 인덱스는 +1
                 System.out.printf("[%s]\t",name.get(i)); // 이름이 출력됨
             }
