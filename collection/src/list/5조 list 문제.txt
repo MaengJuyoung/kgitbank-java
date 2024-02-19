@@ -1,0 +1,224 @@
+문제1)
+배열에 1~9까지의 수를 넣고 random으로 3개의 수를 출력하되
+중복되지 않는 수 3개를 출력 하시오
+System.arraycopy(args, 0, args, 0, 0); 사용
+		
+
+
+
+
+문제2)
+
+리스트를 활용하여 연락처 목록을 생성하는 프로그램을 만드시오
+
+1. 연락처 등록
+2. 연락처 보기
+3. 연락처 삭제
+4. 모든 연락처 보기
+5. 종료
+
+1 입력 시 ) 연락처의 이름과 번호를 등록
+	중복된 이름 등록 시 "중복된 이름이 있습니다." 
+
+2 입력 시 ) 원하는 이름을 입력하면 번호를 확인할 수 있음
+	없는 이름 입력 시 "목록에 없습니다."
+
+
+3 입력 시 ) 원하는 이름을 입력하면 번호를 삭제할 수 있음
+	없는 이름 입력 시 "목록에 없습니다."
+
+4 입력 시 ) 모든 이름과 번호를 확인할 수 있음
+
+
+
+
+
+
+문제3)
+5명의 사람 이름을 입력 받아서 ArrayList에 저장한 후
+이들 중 '김'씨 성을 가진 사람 모두 출력
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================================================
+정답1)
+		int[] num = {1,2,3,4,5,6,7,8,9};
+		int[] num3 = new int[3];
+		int j , tmp;
+		
+		for(int i=0; i<num.length; i++) {
+			j = (int)(Math.random() * num.length);
+			tmp = 0;
+
+			tmp = num[i];
+			num[i] = num[j];
+			num[j] = tmp;
+			
+		}
+		System.arraycopy(num, 0, num3, 0, 3);
+		
+		for(int i =0; i<num3.length ; i++) {
+			System.out.print(num3[i]);
+		}
+
+
+
+====================================================
+정답2)
+Scanner input = new Scanner(System.in);
+		
+ArrayList<String> name = new ArrayList<>();
+		
+ArrayList<String> num = new ArrayList<>();
+		
+String na, nu;
+boolean bool = true;
+		
+while (bool) {
+	System.out.println("1. 연락처 등록");
+	System.out.println("2. 연락처 보기");
+	System.out.println("3. 연락처 삭제");
+	System.out.println("4. 모든 연락처 보기");
+	System.out.println("5. 종료");
+			
+	int n = input.nextInt();
+			
+	switch (n) {
+	case 1:
+		System.out.print("등록할 이름을 입력하세요 : ");
+		na = input.next();
+		// 이름이 중복되지 않을 경우 저장
+		if (name.indexOf(na) == -1) {
+			name.add(na) ; 
+			System.out.print("등록할 번호를 입력하세요 : ");
+			nu = input.next();
+			num.add(nu);
+			System.out.println("이름 : " + na);
+			System.out.println("번호 : " + nu);
+		}
+		else {
+			System.out.println("중복된 이름이 있습니다. ");
+		}
+		break;
+
+	case 2:
+		System.out.println("누구의 연락처를 확인하시겠습니까?");
+		System.out.println("-------이름 목록--------");
+		for (int i = 0 ; i < name.size() ; i++) {
+			System.out.println(name.get(i));
+		}
+		na = input.next();
+				
+		if (name.indexOf(na) == -1) {
+			System.out.println("목록에 없습니다.");
+					
+		}
+		else {
+			System.out.println(na + "의 연락처는 " + num.get(name.indexOf(na)) + "입니다.");
+		}
+		break;
+				
+	case 3:
+		System.out.println("-----이름 목록-----");
+		for (int i = 0 ; i < name.size() ; i++) {
+			System.out.println(name.get(i));
+		}
+		System.out.println("삭제할 연락처의 이름을 작성하세요.");
+		na = input.next();
+				
+		if (name.indexOf(na) == -1) {
+			System.out.println("없는 연락처 입니다.");
+		}
+		else {
+			num.remove(name.indexOf(na));
+			name.remove(na);
+			System.out.println("-----연락처 목록-----");
+			for (int i = 0 ; i < name.size() ; i++) {
+				System.out.println(name.get(i) + " : \t" + num.get(i));
+			}
+		}
+		break;
+				
+	case 4:
+		System.out.println("-----연락처 목록-----");
+		for (int i = 0 ; i < name.size() ; i++) {
+		System.out.println(name.get(i) + " : \t" + num.get(i));
+		}
+				
+		break;
+	case 5:
+		bool = false;
+		break;
+				
+	default:
+		System.out.println("다른 번호를 입력해주세요");
+		break;
+
+			
+	}
+			
+}
+
+=====================================================
+정답3)
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Q1 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		ArrayList<String> nameList = new ArrayList<>();
+		
+		for(int i = 1; i < 6; i++) {
+			System.out.println(i + "번째 사람의 이름을 입력하세요.");
+			String name = input.nextLine();
+			nameList.add(name);
+		}
+		System.out.println("김씨 성을 가진 사람들");
+		
+		for(int i = 0; i < 5; i++) {
+			if(nameList.get(i).charAt(0) == '김') {
+				System.out.println(nameList.get(i));
+			}
+		}
+
+	}
+
+}

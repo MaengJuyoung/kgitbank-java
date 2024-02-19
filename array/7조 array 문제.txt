@@ -1,0 +1,127 @@
+문제 1. 
+배열 인덱스 수를 입력받아서 그 인덱스 크기만큼 배열의 값을 모두 입력해서 저장해서 작성하시오
+배열의 전체 합과 짝수, 홀수 입력 받아 그 합도 같이 작성하시오
+출력화면
+배열 인덱수 수를 입력하세요 : 4
+짝수, 홀수 입력 : 짝수
+배열의 arr[0] 번째 정수 입력 : 1
+배열의 arr[1] 번째 정수 입력 : 2
+배열의 arr[2] 번째 정수 입력 : 3
+배열의 arr[3] 번째 정수 입력 : 4
+배열 전채 합 : 10
+짝수의 합 : 20
+
+문제 2. 
+두수의 합을 구하시오
+int a[] = new int[] {10, 100, 1000, 10000, 100000};
+int b[] = new int[] {90, 900, 9000, 90000, 900000};
+
+문제 3. 
+최댓값과 최솟값을 찾아 출력하시오
+int[] numbers = {5, 1, 9, 3, 7, 2};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+문제 1. 정답
+package array;
+
+import java.util.Scanner;
+
+public class Quiz03 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.print("배열 인덱스 수를 입력하세요 : ");
+		int n = sc.nextInt();
+		int arr[] = new int[n];
+		int sum = 0;
+		String odd;
+		System.out.print("짝수, 홀수 입력 : ");
+		odd = sc.next();
+		for(int i = 0; i < n; i++) {
+			System.out.print("배열의 arr[" + i + "] 번째 정수 입력 : ");
+			arr[i] = sc.nextInt();
+			sum += arr[i];
+		}
+		System.out.println("배열 전채 합 : " + sum);
+		sum = 0;
+		for(int i = 0; i < n; i++) {
+			if(odd.equals("짝수")) {
+				if(arr[i]%2 == 0) {
+					sum += arr[i];
+				}
+			}else {
+				if(arr[i]%2 == 1) {
+					sum += arr[i];
+				}
+			}
+		}
+		if(odd.equals("짝수")) {
+			System.out.println("짝수의 합 : " + sum);
+		}else {
+			System.out.println("홀수의 합 : " + sum);
+		}
+	}
+
+}
+
+
+문제 2. 정답
+정답 :
+
+int a[] = new int[] {10, 100, 1000, 10000, 100000};
+int b[] = new int[] {90, 900, 9000, 90000, 900000};
+int sum = 0;
+		
+for(int i=0; i<a.length; i++) {
+		for(i=0; i<b.length; i++) {
+			sum += a[i] + b[i];
+			System.out.println("두 수의 합 = " + sum);
+			sum = 0;
+			}
+		}		
+	}
+}
+
+문제 3. 정답
+
+        // 주어진 배열
+        int[] numbers = {5, 1, 9, 3, 7, 2};
+
+        // 최댓값과 최솟값을 저장할 변수 초기화
+        int max = numbers[0];
+        int min = numbers[0];
+
+        // 배열을 순회하면서 최댓값과 최솟값을 찾음
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > max) {
+                max = numbers[i];
+            }
+            if (numbers[i] < min) {
+                min = numbers[i];
+            }
+        }
+
+        // 결과 출력
+        System.out.println("최댓값: " + max);
+        System.out.println("최솟값: " + min);
+    }
+}

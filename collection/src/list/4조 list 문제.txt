@@ -1,0 +1,173 @@
+문제) 학생 3명의 국어,영어,수학 점수를 인덱스 순서대로 각각 ArrayList를 만든다.
+* 인덱스 0 = 국어, 1 = 영어, 2 = 수학
+각 과목의 점수를 1~100점 사이의 점수를 랜덤으로 부여한다.
+3명의 학생의 각각 과목당 1등, 전체 평균의 1등을 출력하시오
+ex)
+첫번째 학생 점수 => [24, 88, 14]
+두번째 학생 점수 => [38, 90, 41]
+세번째 학생 점수 => [41, 36, 98]
+국어 성정 1등은 세번째 학생입니다.
+영어 성적 1등은 두번째 학생입니다.
+수학 성정 1등은 세번째 학생입니다.
+전체 1등은 세번째 학생입니다.
+
+
+문제) // 배열 사이즈를 입력받은 후 해당 크기만큼 자연수를 입력받아 ArrayList에 넣어준다.
+      // 1. 입력받은 수들의 평균(average)을 구하시오
+      // 2. 배열을 오름차순으로 정리하여 중앙값(median)을 구하시오.
+      // ArrayList명.sort(Comparator.naturalOrder()); 를 이용하여 오름차순으로 정렬.
+
+문제)
+1~45까지의 6자리의 숫자를 랜덤으로 출력하여 로또 번호 만들기
+
+로또 번호는 중복하여 나오지 않으니 중복이 나오지 않게 해야 합니다.
+
+번호 출력 후 오름차순으로 정렬해주기
+
+ex ) 45,12 , 7 ,43,42,40 이 출력되면
+
+      7, 12, 40,42,43,45 로 오름차순 정렬 
+
+
+
+
+
+
+
+
+
+
+답)
+package list;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+public class myself {
+	public static void main(String[] args) {
+		Random rand = new Random();
+		ArrayList<Integer> stu1 = new ArrayList<>();
+		ArrayList<Integer> stu2 = new ArrayList<>();
+		ArrayList<Integer> stu3 = new ArrayList<>();
+		
+		for (int i = 0; i < 3; i++) {
+			stu1.add(rand.nextInt(100)+1);
+			stu2.add(rand.nextInt(100)+1);
+			stu3.add(rand.nextInt(100)+1);
+		}
+		System.out.println("첫번째 학생 점수 => "+stu1);
+		System.out.println("두번째 학생 점수 => "+stu2);
+		System.out.println("세번째 학생 점수 => "+stu3);
+		
+		int k1 = stu1.get(0); int k2 = stu2.get(0); int k3 = stu3.get(0);
+		int e1 = stu1.get(1); int e2 = stu2.get(1); int e3 = stu3.get(1);
+		int m1 = stu1.get(2); int m2 = stu2.get(2); int m3 = stu3.get(2);
+		if (k1 > k2 && k1 > k3) {
+			System.out.println("국어 성적 1등은 첫번째 학생입니다.");
+		}else if (k2 > k1 && k2 > k3) {
+			System.out.println("국어 성적 1등은 두번째 학생입니다.");
+		}else {
+			System.out.println("국어 성정 1등은 세번째 학생입니다.");
+		}
+		if (e1 > e2 && e1 > e3) {
+			System.out.println("영어 성적 1등은 첫번째 학생입니다.");
+		}else if (e2 > e1 && e2 > e3) {
+			System.out.println("영어 성적 1등은 두번째 학생입니다.");
+		}else {
+			System.out.println("영어 성정 1등은 세번째 학생입니다.");
+		}
+		if (m1 > m2 && m1 > m3) {
+			System.out.println("수학 성적 1등은 첫번째 학생입니다.");
+		}else if (m2 > m1 && m2 > m3) {
+			System.out.println("수학 성적 1등은 두번째 학생입니다.");
+		}else {
+			System.out.println("수학 성정 1등은 세번째 학생입니다.");
+		}
+		
+		int s1avg=(k1+e1+m1)/3; int s2avg=(k2+e2+m2)/3; int s3avg=(k3+e3+m3)/3;
+		if (s1avg > s2avg && s1avg > s3avg) {
+			System.out.println("전체 1등은 첫번째 학생입니다.");
+		}else if (s2avg > s1avg && s2avg > s3avg) {
+			System.out.println("전체 1등은 두번째 학생입니다.");
+		}else {
+			System.out.println("전체 1등은 세번째 학생입니다.");
+		}
+	}
+}
+
+답)
+Scanner sc = new Scanner(System.in);
+      System.out.print("배열 사이즈 입력 >> ");
+      int num = sc.nextInt();
+      
+      ArrayList<Integer> numbers = new ArrayList<>();
+
+      int sum=0, average=0, median=0;
+
+      System.out.print(num+"개의 숫자 입력 >>> ");
+      for(int i=0; i<num; i++) {
+         numbers.add(sc.nextInt());
+      }
+
+      // 평균값 average
+      for(int i=0; i<numbers.size(); i++) {
+         sum += numbers.get(i);
+         average = sum/numbers.size();
+      }
+
+      // 오름차순 정렬
+      numbers.sort(Comparator.naturalOrder());
+      System.out.println("오름차순 : "+numbers);
+      
+      // 중앙값 median
+      int index = numbers.size()/2;
+      if(numbers.size()%2==0){
+         median = (numbers.get(index-1) + numbers.get(index))/2;
+      }
+      else {
+         median = numbers.get(index);
+      }
+
+      // 출력
+      System.out.println("평균 : "+average);
+      System.out.println("중앙값 : "+median);
+
+
+답)
+public static void main(String[] args) {
+      int[] lotto = new int[6];
+
+      for(int i = 0; i < lotto.length; i++) {
+         int random = (int)(Math.random()*45+1);
+         lotto[i] = random;
+
+         for(int j = 0; j < i; j++) {
+            if(lotto[i] == lotto[j]) {
+               i--; 
+            }
+         }
+      }
+      for(int i = 0; i < lotto.length; i++) {
+         System.out.print(lotto[i] + " ");
+      }
+      System.out.println();
+
+      int temp = 0;   
+      for(int i = 0; i < lotto.length; i++) {
+
+         for(int j = 0; j < lotto.length; j++) {
+            if(lotto[i] < lotto[j]) { //오름차순
+               temp = lotto[i];   
+
+               lotto[i] = lotto[j];   
+
+               lotto[j] = temp;   
+            }
+         }
+      }
+
+      for(int i = 0; i < lotto.length; i++) {
+         System.out.print(lotto[i] + " ");
+      }
+
+   }
