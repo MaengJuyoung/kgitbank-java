@@ -3,7 +3,9 @@ package constructor;
 public class MemberDTO02 {
 	private int kor, eng, math, sum;
 	private String name, grade;
+	private double avg;
 	
+
 	public MemberDTO02() {}
 	public MemberDTO02(String name, int kor, int eng, int math, int sum, String grade) {
 		this.name = name;
@@ -46,7 +48,10 @@ public class MemberDTO02 {
 	public String getGrade() {
 		return grade;
 	}
-	public void setGrade(int sum) {
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	/*public void setGrade(int sum) {
 		if (sum>300 || sum<0) {
 			System.out.println("잘못 입력하셨습니다.");
 		}else if (sum>=270) {
@@ -61,7 +66,12 @@ public class MemberDTO02 {
 		}else {
 			this.grade = "F";
 		}
+	}*/
+	public double getAvg() {
+		return avg;
 	}
-	
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
 	
 }
