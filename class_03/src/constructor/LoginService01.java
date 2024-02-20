@@ -3,8 +3,8 @@ package constructor;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class LoginService01 {
-	/*
+public class LoginService01 extends TimeService03 {
+	TimeService03 t;
 	private LoginDTO01 l;
 	Scanner sc = new Scanner(System.in);
 	HashMap<String, String> map = new HashMap<>();
@@ -43,8 +43,10 @@ public class LoginService01 {
 			}else {
 				System.out.print("비밀번호를 입력하세요 >> ");
 				String pwd = sc.next();
+				System.out.println(map.get(pwd)); 
 				if (map.containsValue(pwd)) {
 					System.out.println("인증 통과!!!\n");
+					t.setStartTime();
 				}else {
 					System.out.println("비밀번호가 틀렸습니다.\n");
 				}
@@ -78,14 +80,16 @@ public class LoginService01 {
 			if (map.containsKey(id)) {
 				System.out.println("탈퇴가 완료되었습니다.\n");
 				map.remove(id);
+				t.setEndTime();
 			}else {
 				System.out.println("해당 아이디가 존재하지 않습니다.\n");
 			}
 		}
-	}*/
+	}
 	
 	
 	// 강사님 답
+	/*
 	LoginDTO01 dto;
 	String userId, userPwd;
 	public void display() {
@@ -157,4 +161,5 @@ public class LoginService01 {
 		else
 			System.out.println("11111회원가입 먼저하세요");
 	}
+	*/
 }
