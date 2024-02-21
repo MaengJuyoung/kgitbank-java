@@ -2,38 +2,30 @@ package constructor;
 
 import java.util.Scanner;
 
-public class TimeMain03 { 	// 강사님 답
+public class TimeMain03 { 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		int num;
-		TimeService03 time = new TimeService03();
-		while(true) {
-			System.out.println("1.시작 시간 설정");
-			System.out.println("2.시작 시간 확인");
-			System.out.println("3.종료 시간 설정");
-			System.out.println("4.종료 시간 확인");
-			System.out.println("5.사용 시간 가져오기");
-			System.out.print(">>> : ");
-			num = input.nextInt();
-			switch(num) {
-			case 1:
-				time.setStartTime();
-				break;
-			case 2:
-				String sTime = time.getStartTime();
-				System.out.println( sTime );
-				break;
-			case 3:
-				time.setEndTime();
-				break;
-			case 4:
-				String eTime = time.getEndTime();
-				System.out.println( eTime );
-				break;
-			case 5:
-				System.out.println( time.getResultTime() ); 
-				break;
+		Scanner sc = new Scanner(System.in);
+		TimeInter t = new TimeService03();
+		while (true) {
+			System.out.println("1. 시작 시간 설정\n2. 시작 시간 확인\n3. 종료 시간 설정");
+			System.out.print("4. 종료 시간 확인\n5. 사용 시간 가져오기\n>>> : ");
+			int num = sc.nextInt();
+			if (num==1) {
+				t.setStartTime();
+			}else if (num==2) {
+				String sTime = t.getStartTime();
+				System.out.println(sTime);
+			}else if (num==3) {
+				t.setEndTime();
+			}else if (num==4) {
+				String eTime = t.getEndTime();
+				System.out.println(eTime);
+			}else if (num==5) {
+				System.out.println(t.getResultTime());
+			}else {
+				System.out.println("잘못 입력하셨습니다. ");
 			}
+			System.out.println();
 		}
 	}
 }

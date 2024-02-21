@@ -2,13 +2,13 @@
 
 import java.text.SimpleDateFormat;
 
-public class TimeService03 {	// 강사님 답
+public class TimeService03 implements TimeInter{
 	private TimeDTO03 dto;
 	public TimeService03() {
 		dto = new TimeDTO03();
 	}
 	public void setStartTime() {
-		System.out.println("서비스 시간설정");
+		System.out.println("서비스 시간 설정");
 		long start = System.currentTimeMillis();
 		dto.setStart( start );
 	}
