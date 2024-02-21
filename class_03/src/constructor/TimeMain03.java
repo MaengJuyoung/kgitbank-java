@@ -2,7 +2,7 @@ package constructor;
 
 import java.util.Scanner;
 
-public class MainClass03 { 	// 강사님 답
+public class TimeMain03 { 	// 강사님 답
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int num;
