@@ -4,7 +4,7 @@ import java.util.Scanner;
 /*
 결과 확인해 보고 중복되는 코드는 메소드를 만들어 줄여보세요^^
 */
-public class MemberService {
+public class MemberService implements MemberInter {
 	private MemberDTO member;
 	public MemberService() { member = new MemberDTO(); }
 	public void display() {
