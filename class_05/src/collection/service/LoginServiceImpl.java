@@ -14,7 +14,7 @@ public class LoginServiceImpl implements LoginService{
 	public LoginServiceImpl() {
 		dao = new LoginDAO();
 	}
-
+	// LoginDTO dto = new LoginDTO(); 이게 바깥에만 있고 안에 없을 경우 new 연산자를 한 번만 만들기때문에 얕은복사가 되어버림!! 계속 새로운 값을 만들어서 저장하려면 메소드마다 있어야함
 
 	@Override
 	public void loginCheck() {
