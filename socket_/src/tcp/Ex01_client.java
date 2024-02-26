@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Ex01_client {
 	public static void main(String[] args) throws Exception {
-		// 192.168.42.104, 12345 ("IP", 패킷번호)
+		// 192.168.42.104, 12345 ("IP", 포트번호)
 		// 강사님 IP : 192.168.42.44
 		Socket sock = new Socket("192.168.42.104", 12345);
 		System.out.println("클라이언트 실행!!!");
