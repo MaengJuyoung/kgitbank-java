@@ -3,7 +3,6 @@ package ex01.service;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import ex01.MemberDTO;
 import ex01.dao.MemberDAO2;
 import ex01.dto.memberDTO;
 
@@ -66,7 +65,7 @@ public class MemberServiceImpl2 implements MemberService2{
 			String id = input.next();
 			memberDTO m = dao.memberChk(id);
 			if (m==null) {
-				MemberDTO d = new MemberDTO();
+				memberDTO d = new memberDTO();
 				d.setId(id);
 				System.out.print("가입할 pwd 입력 : "); 	d.setPwd(input.next());
 				System.out.print("가입할 name 입력 : ");	d.setName(input.next());

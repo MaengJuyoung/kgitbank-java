@@ -6,7 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import ex01.MemberDTO;
 import ex01.dto.memberDTO;
 
 public class MemberDAO2 {
@@ -88,7 +87,7 @@ public class MemberDAO2 {
 		}
 		return result;
 	}
-	public int insert(MemberDTO d) {
+	public int insert(memberDTO d) {
 		String sql = "insert into member_test values(?, ?, ?, ?)";
 		int result = 0;
 		try {
