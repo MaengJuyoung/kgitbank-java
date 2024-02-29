@@ -6,13 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+import ex01.MemberDTO;
 import ex01.dto.memberDTO;
 
-public class MemberDAO {
+public class MemberDAO2 {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	public MemberDAO() {
+	public MemberDAO2() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			String url = "jdbc:oracle:thin:@localhost:1521:orcl";	// xe
@@ -87,5 +88,32 @@ public class MemberDAO {
 		}
 		return result;
 	}
-
+	public int insert(MemberDTO d) {
+		String sql = "insert into member_test values(?, ?, ?, ?)";
+		int result = 0;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, d.getId());
+			ps.setString(2, d.getPwd());
+			ps.setString(3, d.getName());
+			ps.setInt(4, d.getAge());
+			result = ps.executeUpdate();	// insert 성공이면 1 반환, 안되면 오류 메세지(catch)실행
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	public int delete(String delId) {
+		String sql = "delete from member_test where id = ?";	// ? : 나중에 값을 채워 넣겠다는 의미
+		int result = 0;
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, delId);			// '1'번째 물음표에 delID를 넣겠다. 
+			// executeUpdate() : select 제외하고는 이 명령어 사용
+			result = ps.executeUpdate();	// 삭제 되면 1 반환, 안되면 0 반환
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
 }

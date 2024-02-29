@@ -12,7 +12,7 @@ public class MemberServiceImpl implements MemberService{
 		dao = new MemberDAO();
 	}
 	public void memberView() {
-		System.out.println("---- 회원 보기 기능 ----");
+		System.out.println("-- 회원 보기 기능 --");
 		ArrayList<memberDTO> members = dao.getMembers();
 		if (members.size() == 0) {
 			System.out.println("등록된 정보가 없습니다!\n");
