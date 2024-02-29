@@ -12,11 +12,14 @@ public class MemberDAO2 {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
-	public MemberDAO2() {
+	public MemberDAO2() {	// 자바와 DB(오라클) 연결
 		try {
+			// Class.forName을 사용하여 해당 DB사의 jdbc 드라이버를 로드 한다. ClassNotFoundException이 발생할 수 있다. 따라서 예외처리 사용!
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			String url = "jdbc:oracle:thin:@localhost:1521:orcl";	// xe
-			String id ="c##abcd",  pwd = "1234";
+			// DriverManager 클래스를 통해 DB와의 연결을 생성한다. DB접속에 필요한 URL, ID, PW를 입력한다. (본인 PC에 따라 값이 다를 수 있다.)
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";	// 18버전 이하 : xe
+			String id ="c##abcd";
+			String pwd = "1234";
 			con = DriverManager.getConnection(url, id, pwd);
 		}catch (Exception e) {
 			e.printStackTrace();
