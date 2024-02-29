@@ -165,6 +165,7 @@ public class MainClass {
 				}
 				System.out.print("가입할 pwd 입력 : ");
 				d.setPwd(input.next());
+				System.out.print("가입할 name 입력 : ");
 				d.setName(input.next());
 				System.out.print("가입할 age 입력 : ");
 				d.setAge(input.nextInt());
