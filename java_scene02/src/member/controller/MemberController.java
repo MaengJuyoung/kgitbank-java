@@ -28,9 +28,16 @@ public class MemberController implements Initializable{
 		ms.setRoot(root);
 		this.root = root;
 	}
+	/*
+	public MemberController() {
+		System.out.println("생성자 초기화 -------"+cmbAge);
+		// 생성자에서는 어노테이션으로 생성된 값을 가져올 수 없음. 즉, 값들이 모두 null
+	}
+	*/
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		//System.out.println("초기화 실행 --------"+cmbAge);
 		ms = new MemberServiceImpl();
 		
 		String[] cmbTxt = {"20대 미만", "20대","30대","40대","50대 이상"};

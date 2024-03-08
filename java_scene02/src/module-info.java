@@ -16,4 +16,5 @@ module java_scene02 {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;
+	requires java.sql;
 }
