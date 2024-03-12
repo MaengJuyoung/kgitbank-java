@@ -12,13 +12,18 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import reserve.dto.ReserveDTO;
+import seat.main.SeatMain;
 
 public class Controller implements Initializable{
 	@FXML public ListView<String> movielist;
@@ -34,14 +39,17 @@ public class Controller implements Initializable{
 	@FXML public Label movieDay;
 	@FXML public ToggleGroup movieTime;
 	@FXML public RadioButton time1, time2, time3, time4, time5;
-	
 
+	@FXML public Button nextSeat;
+
+	ReserveDTO rdto = new ReserveDTO();
 
 	ObservableList<String> imageArr;
 	Parent root;
 	String path, today=null;
 	LocalDate day=null;
-	
+	boolean setM, setT, setD = false;
+
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
@@ -67,12 +75,17 @@ public class Controller implements Initializable{
 
 		movielist.getSelectionModel().selectedIndexProperty().addListener((a,b,c)->{
 			setImageView((int)c);	// 인덱스에 맞는 영화 포스터 출력
+			rdto.setIndex((int)c);
 		});
 
 	}
 
 	public void selectMovie() {	// 목록에서 영화 선택 시 영화정보 출력
-
+		rdto.setTheater(null);
+		rdto.setDate(null);
+		rdto.setTime(null);
+		theaterReset();
+		timeReset();
 		int index = movielist.getSelectionModel().getSelectedIndex();
 
 		switch(index) {
@@ -89,17 +102,19 @@ public class Controller implements Initializable{
 		}
 
 		switch(index) {	// 시간 선택 시 상영관 정보 노출
-		case 0: movieTheater1.setText("1관"); movieTheater2.setText("1관"); break;
-		case 1: movieTheater1.setText("2관"); movieTheater2.setText("2관"); break;
-		case 2: movieTheater1.setText("3관"); movieTheater2.setText("3관"); break;
-		case 3: movieTheater1.setText("4관"); movieTheater2.setText("4관"); break;
-		case 4: movieTheater1.setText("5관"); movieTheater2.setText("5관"); break;
-		case 5: movieTheater1.setText("6관"); movieTheater2.setText("6관"); break;
-		case 6: movieTheater1.setText("7관"); movieTheater2.setText("7관"); break;
-		case 7: movieTheater1.setText("8관"); movieTheater2.setText("8관"); break;
-		case 8: movieTheater1.setText("9관"); movieTheater2.setText("9관"); break;
-		case 9: movieTheater1.setText("10관"); movieTheater2.setText("10관"); break;
+		case 0: movieTheater1.setText("1관"); movieTheater2.setText("1관"); rdto.setTheater("1관"); break;
+		case 1: movieTheater1.setText("2관"); movieTheater2.setText("2관"); rdto.setTheater("2관"); break;
+		case 2: movieTheater1.setText("3관"); movieTheater2.setText("3관"); rdto.setTheater("3관"); break;
+		case 3: movieTheater1.setText("4관"); movieTheater2.setText("4관"); rdto.setTheater("4관"); break;
+		case 4: movieTheater1.setText("5관"); movieTheater2.setText("5관"); rdto.setTheater("5관"); break;
+		case 5: movieTheater1.setText("6관"); movieTheater2.setText("6관"); rdto.setTheater("6관"); break;
+		case 6: movieTheater1.setText("7관"); movieTheater2.setText("7관"); rdto.setTheater("7관"); break;
+		case 7: movieTheater1.setText("8관"); movieTheater2.setText("8관"); rdto.setTheater("8관"); break;
+		case 8: movieTheater1.setText("9관"); movieTheater2.setText("9관"); rdto.setTheater("9관"); break;
+		case 9: movieTheater1.setText("10관"); movieTheater2.setText("10관"); rdto.setTheater("10관"); break;
 		}
+		setM = true;
+		rdto.setMovie(movieName.getText());
 	}
 	private void setImageView(int index) {	// 포스터 보여주기
 		File file = new File(path+"/"+imageArr.get(index));
@@ -108,6 +123,7 @@ public class Controller implements Initializable{
 		moviePoster.setImage(img);
 	}
 	public void selectTheater() {	// 극장 선택 시 
+		timeReset();
 		int index = theaterlist.getSelectionModel().getSelectedIndex();
 
 		switch(index) {
@@ -119,44 +135,87 @@ public class Controller implements Initializable{
 		case 5: moviePlace.setText("왕십리"); break;
 		case 6: moviePlace.setText("용산아이파크몰"); break;
 		}
+		setT = true;
+		rdto.setPlace(moviePlace.getText());
 	}
 	public void selCal() {		// 달력 실행 시(날짜 선택 시)
+		if (setM==true && setT==true) {
+			timeReset();
+
+			LocalDate day = cal.getValue();
+			DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			today = day.format(dateTimeFormatter);
+			movieDay.setText(today);
+			setD = true;
+			rdto.setDate(today);
+		}else {
+			movieFirst();
+		}
+		
+	}
+	public void theaterReset() {	// 극장 초기화 기능
+		moviePlace.setText("");
+	}
+	public void timeReset() {		// 시간 초기화 기능
+		movieDay.setText("");
 		time1.setSelected(false);
 		time2.setSelected(false);
 		time3.setSelected(false);
 		time4.setSelected(false);
 		time5.setSelected(false);
-		
-		LocalDate day = cal.getValue();
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-		today = day.format(dateTimeFormatter);
-		movieDay.setText(today);
-		
 	}
-	public void selDate() {
-		if (day==null) {
-			movieDay.setText("날짜 먼저 선택!");
-			
-		}else {
-			movieDay.setText(today+"  "+time1.getText());
-			
-		}
-		
+	public void movieFirst() {
+		if (setT==false) {
+			movieDay.setText("영화 먼저 선택!!");
+		}else movieDay.setText("극장 먼저 선택!!");
 	}
+	public void dateFirst() {
+		if (setD==false) {
+			movieFirst();
+		}else movieDay.setText("날짜 먼저 선택!!");
+	}
+
 	public void selT1() {
-		selDate();
-		//movieDay.setText(today+"  "+time1.getText());
+		if (setD == true) {
+			movieDay.setText(today+"  "+time1.getText()); rdto.setTime(time1.getText());
+		}
+		else dateFirst();
 	}
 	public void selT2() {
-		movieDay.setText(today+"  "+time2.getText());
+		if (setD == true) {
+			movieDay.setText(today+"  "+time2.getText()); rdto.setTime(time2.getText());
+		}
+		else dateFirst();
 	}
 	public void selT3() {
-		movieDay.setText(today+"  "+time3.getText());
+		if (setD == true) {
+			movieDay.setText(today+"  "+time3.getText()); rdto.setTime(time3.getText());
+		}
+		else dateFirst();
 	}
 	public void selT4() {
-		movieDay.setText(today+"  "+time4.getText());
+		if (setD == true) {
+			movieDay.setText(today+"  "+time4.getText()); rdto.setTime(time4.getText());
+		}
+		else dateFirst();
 	}
 	public void selT5() {
-		movieDay.setText(today+"  "+time5.getText());
+		if (setD == true) {
+			movieDay.setText(today+"  "+time5.getText()); rdto.setTime(time5.getText());
+		}
+		else dateFirst(); 
+	}
+	public void nextSeat() {	// 좌석 선택 버튼 누를 시
+		if (rdto.getMovie()!=null && rdto.getPlace()!=null &&
+				rdto.getDate()!=null && rdto.getTime()!=null) {
+			SeatMain seatMain = new SeatMain();
+			seatMain.viewFx(rdto);
+		}else {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setContentText("모든 항목을 선택하세요!!!");
+			alert.show();
+		}
+		
+		
 	}
 }

@@ -36,7 +36,7 @@
                   <ImageView fx:id="moviePoster" fitHeight="145.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
                   <VBox alignment="TOP_CENTER" prefHeight="124.0" prefWidth="122.0" style="-fx-background-color: black;">
                      <children>
-                        <Label fx:id="movieName" minHeight="42.0" prefHeight="77.0" prefWidth="141.0" textFill="#ffe500">
+                        <Label fx:id="movieName" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="80.0" textFill="#ffe500">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -54,7 +54,7 @@
                         <Label text="인원" textFill="WHITE" />
                      </children>
                   </VBox>
-                  <VBox alignment="CENTER_LEFT" prefHeight="144.0" prefWidth="114.0" spacing="10.0" style="-fx-background-color: black;">
+                  <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="122.0" spacing="10.0" style="-fx-background-color: black;">
                      <children>
                         <Label fx:id="moviePlace" maxWidth="1.7976931348623157E308" prefHeight="14.0" prefWidth="117.0" textFill="#ffe500">
                            <font>
@@ -86,7 +86,7 @@
                   </Label>
                </children>
             </HBox>
-            <Button fx:id="nextSeat" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="120.0" prefWidth="105.0" style="-fx-background-color: red;" text="좌석선택" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#nextSeat" prefHeight="120.0" prefWidth="105.0" style="-fx-background-color: red;" text="좌석선택" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>

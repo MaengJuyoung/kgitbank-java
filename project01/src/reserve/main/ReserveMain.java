@@ -8,9 +8,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import reserve.controller.Controller;
 
 
-public class MainClass extends Application {
+public class ReserveMain extends Application {
 
 	@Override
 	public void start(Stage arg0) throws Exception {
@@ -23,6 +24,9 @@ public class MainClass extends Application {
 		
 		FXMLLoader loader = new FXMLLoader(url);
 		Parent root = loader.load();
+		
+		Controller ctrl = loader.getController();
+		ctrl.setRoot(root);
 		
 		Scene scene = new Scene(root);
 		arg0.setScene(scene);
