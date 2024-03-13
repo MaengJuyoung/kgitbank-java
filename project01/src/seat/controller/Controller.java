@@ -347,8 +347,8 @@ public class Controller extends Thread implements Initializable{
 		Iterator<String> iter = str.iterator();	// Iterator 사용
 		while (iter.hasNext()) {//값이 있으면 true 없으면 false
 			newStr = iter.next();
-			if (arr.contains(newStr)==false) {
-				arr.add(newStr);
+			if (arr.contains(newStr)==true) {
+				arr.remove(newStr);
 			}
 		}
 		System.out.println(arr);
