@@ -1,21 +1,31 @@
 package seat.dto;
 
+import java.util.ArrayList;
 
 public class SeatDTO {
 	// resultSeat : 총 남은 좌석 수
 	// seatAble : 선택 가능한 좌석 수(인원 수 - 선택좌석 수)
 	// count : 선택한 좌석 수 
 	// snum : 인원 수
-	private int resultSeat, seatAble, count, snum;
+	private int resultSeat, seatAble, count, snum, sumPrice;
+	public int getSumPrice() {
+		return sumPrice;
+	}
+
+	public void setSumPrice(int sumPrice) {
+		this.sumPrice = sumPrice;
+	}
+
 	private String str;
-	private String[] arr;
+	private ArrayList<String> arr;
 	
 
-	public String[] getArr() {
+
+	public ArrayList<String> getArr() {
 		return arr;
 	}
 
-	public void setArr(String[] arr) {
+	public void setArr(ArrayList<String> arr) {
 		this.arr = arr;
 	}
 

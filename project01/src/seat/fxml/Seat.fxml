@@ -127,79 +127,79 @@
             <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="H" GridPane.rowIndex="8" />
             <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="I" GridPane.rowIndex="9" />
             <CheckBox fx:id="selA1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i1" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <CheckBox fx:id="selB1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f1" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selI1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i1" GridPane.columnIndex="1" GridPane.rowIndex="9" />
             <CheckBox fx:id="selA2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e2" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f2" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i2" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+            <CheckBox fx:id="selB2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b2" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c2" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e2" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f2" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selI2" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i2" GridPane.columnIndex="2" GridPane.rowIndex="9" />
             <CheckBox fx:id="selA3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a3" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b3" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d3" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f3" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h3" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selB3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b3" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c3" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selD3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d3" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <CheckBox fx:id="selF3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f3" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selH3" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h3" GridPane.columnIndex="4" GridPane.rowIndex="8" />
             <CheckBox fx:id="selA4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a4" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b4" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c4" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d4" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f4" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h4" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selB4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b4" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c4" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selD4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d4" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <CheckBox fx:id="selF4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f4" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selH4" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h4" GridPane.columnIndex="5" GridPane.rowIndex="8" />
             <CheckBox fx:id="selA5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a5" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b5" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c5" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e5" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f5" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g5" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selB5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b5" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c5" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e5" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f5" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selG5" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g5" GridPane.columnIndex="6" GridPane.rowIndex="7" />
             <CheckBox fx:id="selA6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a6" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b6" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c6" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e6" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f6" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g6" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a7" GridPane.columnIndex="8" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b7" GridPane.columnIndex="8" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e7" GridPane.columnIndex="8" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g7" GridPane.columnIndex="8" GridPane.rowIndex="7" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h7" GridPane.columnIndex="8" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a8" GridPane.columnIndex="9" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b8" GridPane.columnIndex="9" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e8" GridPane.columnIndex="9" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g8" GridPane.columnIndex="9" GridPane.rowIndex="7" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h8" GridPane.columnIndex="9" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a9" GridPane.columnIndex="10" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b9" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c9" GridPane.columnIndex="10" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d9" GridPane.columnIndex="10" GridPane.rowIndex="4" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e9" GridPane.columnIndex="10" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f9" GridPane.columnIndex="10" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h9" GridPane.columnIndex="10" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a10" GridPane.columnIndex="11" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b10" GridPane.columnIndex="11" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c10" GridPane.columnIndex="11" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d10" GridPane.columnIndex="11" GridPane.rowIndex="4" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e10" GridPane.columnIndex="11" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f10" GridPane.columnIndex="11" GridPane.rowIndex="6" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h10" GridPane.columnIndex="11" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a11" GridPane.columnIndex="13" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b11" GridPane.columnIndex="13" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c11" GridPane.columnIndex="13" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e11" GridPane.columnIndex="13" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g11" GridPane.columnIndex="13" GridPane.rowIndex="7" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h11" GridPane.columnIndex="13" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i11" GridPane.columnIndex="13" GridPane.rowIndex="9" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a12" GridPane.columnIndex="14" GridPane.rowIndex="1" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b12" GridPane.columnIndex="14" GridPane.rowIndex="2" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c12" GridPane.columnIndex="14" GridPane.rowIndex="3" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e12" GridPane.columnIndex="14" GridPane.rowIndex="5" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g12" GridPane.columnIndex="14" GridPane.rowIndex="7" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h12" GridPane.columnIndex="14" GridPane.rowIndex="8" />
-            <CheckBox alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i12" GridPane.columnIndex="14" GridPane.rowIndex="9" />
+            <CheckBox fx:id="selB6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b6" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c6" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e6" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f6" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selG6" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g6" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selA7" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a7" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB7" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b7" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selE7" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e7" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selG7" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g7" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selH7" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h7" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selA8" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a8" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB8" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b8" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selE8" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e8" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selG8" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g8" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selH8" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h8" GridPane.columnIndex="9" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selA9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a9" GridPane.columnIndex="10" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b9" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c9" GridPane.columnIndex="10" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selD9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d9" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+            <CheckBox fx:id="selE9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e9" GridPane.columnIndex="10" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f9" GridPane.columnIndex="10" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selH9" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h9" GridPane.columnIndex="10" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selA10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a10" GridPane.columnIndex="11" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b10" GridPane.columnIndex="11" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c10" GridPane.columnIndex="11" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selD10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#d10" GridPane.columnIndex="11" GridPane.rowIndex="4" />
+            <CheckBox fx:id="selE10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e10" GridPane.columnIndex="11" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selF10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#f10" GridPane.columnIndex="11" GridPane.rowIndex="6" />
+            <CheckBox fx:id="selH10" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h10" GridPane.columnIndex="11" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selA11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a11" GridPane.columnIndex="13" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b11" GridPane.columnIndex="13" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c11" GridPane.columnIndex="13" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e11" GridPane.columnIndex="13" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selG11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g11" GridPane.columnIndex="13" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selH11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h11" GridPane.columnIndex="13" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selI11" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i11" GridPane.columnIndex="13" GridPane.rowIndex="9" />
+            <CheckBox fx:id="selA12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#a12" GridPane.columnIndex="14" GridPane.rowIndex="1" />
+            <CheckBox fx:id="selB12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#b12" GridPane.columnIndex="14" GridPane.rowIndex="2" />
+            <CheckBox fx:id="selC12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#c12" GridPane.columnIndex="14" GridPane.rowIndex="3" />
+            <CheckBox fx:id="selE12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#e12" GridPane.columnIndex="14" GridPane.rowIndex="5" />
+            <CheckBox fx:id="selG12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#g12" GridPane.columnIndex="14" GridPane.rowIndex="7" />
+            <CheckBox fx:id="selH12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#h12" GridPane.columnIndex="14" GridPane.rowIndex="8" />
+            <CheckBox fx:id="selI12" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#i12" GridPane.columnIndex="14" GridPane.rowIndex="9" />
             <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="■" GridPane.columnIndex="6" GridPane.rowIndex="4">
                <font>
                   <Font size="20.0" />
@@ -332,11 +332,11 @@
             </Label>
          </children>
       </GridPane>
-      <Button layoutY="486.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: gray;" text="영화선택" textFill="WHITE">
+      <Button layoutY="486.0" mnemonicParsing="false" onAction="#selectMovie" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: gray;" text="영화선택" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <Button layoutX="700.0" layoutY="486.0" mnemonicParsing="false" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: red;" text="결제선택" textFill="WHITE">
+      <Button layoutX="700.0" layoutY="486.0" mnemonicParsing="false" onAction="#selectPay" prefHeight="145.0" prefWidth="100.0" style="-fx-background-color: red;" text="결제선택" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font></Button>
@@ -366,7 +366,7 @@
                   <Label text="인원" textFill="WHITE" />
                </children>
             </VBox>
-            <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="122.0" spacing="10.0" style="-fx-background-color: black;">
+            <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="136.0" spacing="10.0" style="-fx-background-color: black;">
                <children>
                   <Label fx:id="moviePlace" maxWidth="1.7976931348623157E308" prefHeight="14.0" prefWidth="117.0" textFill="#ffe500">
                      <font>
@@ -388,14 +388,20 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="60.0">
                <children>
-                  <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="60.0" text="좌석번호" textFill="WHITE" />
-                  <Label alignment="CENTER" prefHeight="70.0" prefWidth="60.0" text="총 금액" textFill="WHITE" />
+                  <Label maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="60.0" text="좌석번호" textFill="WHITE" />
+                  <Label fx:id="selPerson" maxWidth="1.7976931348623157E308" prefHeight="50.0" textFill="WHITE" />
+                  <Label prefHeight="40.0" prefWidth="60.0" text="총 금액" textFill="WHITE" />
                </children>
             </VBox>
             <VBox prefHeight="145.0" prefWidth="125.0">
                <children>
-                  <Label fx:id="seatNum" maxWidth="1.7976931348623157E308" prefHeight="70.0" prefWidth="118.0" textFill="#ffe500" />
-                  <Label maxWidth="1.7976931348623157E308" prefHeight="70.0" text="Label" textFill="#ffe500" />
+                  <Label fx:id="seatNum" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="118.0" textFill="#ffe500" />
+                  <Label fx:id="moviePrice" maxWidth="1.7976931348623157E308" prefHeight="50.0" textFill="#ffe500" />
+                  <Label fx:id="sumPrice" maxWidth="1.7976931348623157E308" prefHeight="40.0" textFill="#ffe500">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </VBox>
          </children></HBox>
@@ -428,5 +434,10 @@
       <Label layoutX="685.0" layoutY="295.0" prefHeight="18.0" prefWidth="59.0" text="예매완료" />
       <CheckBox layoutX="660.0" layoutY="266.0" mnemonicParsing="false" text="예매가능" />
       <HBox layoutX="570.0" layoutY="386.0" prefHeight="100.0" prefWidth="200.0" />
+      <Label layoutX="25.0" layoutY="447.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="600.0" text="※ 인원 수 변경 시 선택했던 좌석을 취소 후 다시 선택해야 합니다." textFill="BLUE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

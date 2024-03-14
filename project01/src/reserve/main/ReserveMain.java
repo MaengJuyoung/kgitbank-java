@@ -30,6 +30,7 @@ public class ReserveMain extends Application {
 		
 		Scene scene = new Scene(root);
 		arg0.setScene(scene);
+		arg0.setTitle("영화 선택");
 		arg0.show();
 	}
 	public static void main(String[] args) {

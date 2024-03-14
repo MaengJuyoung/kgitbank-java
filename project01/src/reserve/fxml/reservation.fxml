@@ -51,7 +51,7 @@
                         <Label text="극장" textFill="WHITE" />
                         <Label text="일시" textFill="WHITE" />
                         <Label text="상영관" textFill="WHITE" />
-                        <Label text="인원" textFill="WHITE" />
+                        <Label text="인원" textFill="#756b6b" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER_LEFT" prefHeight="145.0" prefWidth="122.0" spacing="10.0" style="-fx-background-color: black;">
