@@ -1,0 +1,88 @@
+package login.service;
+
+import common.CommonService;
+import commonMainProject.MainClass4;
+import javafx.scene.Parent;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import login.dao.LoginDAO;
+import login.dto.LoginDTO;
+import login.user.LoginDeleteMain;
+import login.user.LoginModifyMain;
+import longin.idfind.LoginIdfind;
+import longin.idfind.LoginPwdfind;
+import member.dto.MemberDTO;
+import member.main.MemberMain;
+
+public class LoginServiceImpl implements LoginService{
+	Parent root;
+	private LoginDAO dao;
+	public LoginServiceImpl() {
+		dao = new LoginDAO();
+	}
+
+	public void loginFunc(Parent root, TextField fxId, TextField fxPwd, CheckBox chkId) {
+
+		System.out.println("id : "+ fxId.getText());
+
+		System.out.println("pwd : "+ fxPwd.getText());
+
+		LoginDTO dto = dao.getUser(fxId.getText());
+
+		System.out.println("dto : " + dto);
+
+		String msg = null;
+		String id = fxId.getText();
+
+		if(dto != null) {
+
+			if(dto.getPwd().equals(fxPwd.getText())) {
+				System.out.println(root);
+				msg = dto.getName() +"님이 로그인 하셨습니다.";
+				MainClass4 mc = new MainClass4();
+				mc.viewFx(root, id, dto.getName());
+
+			}else {
+				msg = "비밀번호 틀림";
+			}
+		}else {
+			msg = "존재하지 않는 아이디입니다.";
+		}
+		CommonService.myAlert(msg);
+	}
+	public void registerFunc(Parent root) {
+		MemberMain member = new MemberMain();
+		member.viewFx(root);
+	}
+	public void idfindFunc(Parent root) {
+		LoginIdfind find = new LoginIdfind();
+		find.idFindFx(root);
+	}
+	public void pwdfincFunc(Parent root) {
+		
+	}
+
+	public void pwdfindFunc(Parent root) {
+		LoginPwdfind pwd = new LoginPwdfind();
+		pwd.findPwdFx(root);
+	}
+
+	public void btnFind(String idf) {
+		
+	}
+
+	public String idid() {
+		return "b";
+	}
+
+	public void btnPwd(String pwd) {
+		
+	}
+
+	@Override
+	public String btnfind() {
+		return "a";
+	}
+}
+

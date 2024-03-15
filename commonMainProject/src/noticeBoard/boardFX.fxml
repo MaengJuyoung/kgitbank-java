@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noticeBoard.Controller">
+   <children>
+      <Label fx:id="idName" layoutX="50.0" layoutY="191.0" text="회원" />
+      <ImageView fx:id="imageProfile" fitHeight="140.0" fitWidth="110.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="27.0" layoutY="238.0" mnemonicParsing="true" onAction="#watchMovieButton" prefHeight="62.0" prefWidth="83.0" text="내가 본 영화" />
+      <Button layoutX="27.0" layoutY="310.0" mnemonicParsing="false" onAction="#movieTestButton" prefHeight="62.0" prefWidth="83.0" text="내가 쓴 리뷰" />
+      <ImageView fx:id="movie1Profile" fitHeight="100.0" fitWidth="90.0" layoutX="160.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="movie3Profile" fitHeight="100.0" fitWidth="90.0" layoutX="160.0" layoutY="284.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="movie4Profile" fitHeight="100.0" fitWidth="90.0" layoutX="160.0" layoutY="408.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="movie2Profile" fitHeight="100.0" fitWidth="90.0" layoutX="160.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="movie1Name" layoutX="264.0" layoutY="55.0" text="영화">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="264.0" layoutY="110.0" mnemonicParsing="false" onAction="#movie1judge" text="이 영화를 평가해주세요" />
+      <Label fx:id="movie2Name" layoutX="264.0" layoutY="175.0" text="영화">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="movie4Name" layoutX="264.0" layoutY="415.0" text="영화">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="movie3Name" layoutX="264.0" layoutY="295.0" text="영화">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="264.0" layoutY="470.0" mnemonicParsing="false" onAction="#movie4judge" text="이 영화를 평가해주세요" />
+      <Button layoutX="264.0" layoutY="350.0" mnemonicParsing="false" onAction="#movie3judge" text="이 영화를 평가해주세요" />
+      <Button layoutX="264.0" layoutY="230.0" mnemonicParsing="false" onAction="#movie2judge" text="이 영화를 평가해주세요" />
+      <Button layoutX="265.0" layoutY="546.0" mnemonicParsing="false" onAction="#page2" text="2" textFill="#0d0000" />
+      <Button layoutX="296.0" layoutY="546.0" mnemonicParsing="false" onAction="#page3" text="3" />
+      <Button layoutX="236.0" layoutY="546.0" mnemonicParsing="false" onAction="#page1" text="1" />
+      <Label layoutX="160.0" layoutY="20.0" text="내가 본 영화" />
+      <Button layoutX="13.0" layoutY="9.0" mnemonicParsing="false" onAction="#backButton" text="←" />
+    
+   </children>
+</AnchorPane>
