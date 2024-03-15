@@ -117,6 +117,9 @@ public class Controller implements Initializable{
 			Alert alert = new Alert(AlertType.INFORMATION);
 			alert.setContentText(selectCard.getValue()+"(으)로 결제합니다.\n예매가 완료되었습니다. 감사합니다!");
 			alert.show();
+			// 메인페이지로 이동
+//			MainClass3 mc = new MainClass3();
+//			mc.viewFx(root, rdto);
 			cancel(root);
 		}else {
 			Alert alert = new Alert(AlertType.ERROR);

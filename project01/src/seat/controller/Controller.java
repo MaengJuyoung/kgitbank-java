@@ -329,7 +329,7 @@ public class Controller implements Initializable{
 
 	// 남은 좌석 수 체크
 	public void checkSeat() {
-		System.out.println(sdto.getSeatAble());
+		System.out.println("남은 좌석 수 : "+sdto.getSeatAble());
 	}
 
 	// 좌석 선택 시 
@@ -409,6 +409,7 @@ public class Controller implements Initializable{
 		Alert alert = new Alert(AlertType.ERROR);
 		alert.setContentText("선택한 좌석을 취소한 후 인원을 먼저 선택해주세요!");
 		alert.show();
+		ableP();
 	}
 	// 좌석 선정
 	public void setSeat(String seat) {
