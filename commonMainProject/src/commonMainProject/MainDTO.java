@@ -74,5 +74,4 @@ public class MainDTO {
 	public void setTheater(String theater) {
 		this.theater = theater;
 	}
-
 }

@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainClass2 {
-	public void viewFx(Parent root) {
+	public void viewFx(Parent root, MainDTO dto) {
 		Stage stage = (Stage)root.getScene().getWindow(); 
 		
 		try {
@@ -16,7 +16,7 @@ public class MainClass2 {
 			root = loader.load();
 			
 			MainController ctrl = loader.getController();
-			ctrl.setRoot(root);
+			ctrl.setRoot2(root, dto);
 			
 		} catch (IOException e) {
 			e.printStackTrace();

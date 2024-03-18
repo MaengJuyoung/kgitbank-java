@@ -1,23 +1,20 @@
 package noticeBoard;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 import commonMainProject.MainClass2;
+import commonMainProject.MainDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import movieJudge.movieJudgeMain;
 import movieTest.movieTestMain;
 
@@ -38,6 +35,7 @@ public class Controller implements Initializable{
 	String path1;
 	Parent root;
 	String mvpath1, mvpath2, mvpath3, mvpath4;
+	MainDTO dto;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -259,8 +257,13 @@ public class Controller implements Initializable{
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
+	public void setRoot2(Parent root,MainDTO dto) {
+		this.root = root;
+		this.dto = dto;
+		
+	}
 	public void backButton() {
 		MainClass2 mc = new MainClass2();
-		mc.viewFx(root);
+		mc.viewFx(root, dto);
 	}
 }

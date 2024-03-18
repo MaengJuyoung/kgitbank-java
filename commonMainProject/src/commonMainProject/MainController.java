@@ -24,29 +24,36 @@ public class MainController implements Initializable{
 	String name;
 	MainDTO dto;
 	
-	// rdto, 
 
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		dto = new MainDTO();
 		Thread thread = new Thread() {
 			@Override
 			public void run() {
 				Platform.runLater(()->{
-					
 				});
 			}
 		};
-		dto = new MainDTO();
+		thread.start();
 		
 	}
 	public void setRoot2(String id, String name) {
 		this.id = id;
 		this.name = name;
+		//MainDTO dto = new MainDTO();
+		dto.setId(id);
+		dto.setName(name);
+		System.out.println(dto.getId());
 	}
 	public void setRoot(Parent root) {
 		this.root = root;
 
+	}
+	public void setRoot2(Parent root, MainDTO dto) {
+		this.root = root;
+		this.dto = dto;
 	}
 	public void setRdto(ReserveDTO rdto) {
 		this.rdto = rdto;
@@ -58,7 +65,7 @@ public class MainController implements Initializable{
 	}
 	public void boardFunc() {
 		noticeBoardMain nbm = new noticeBoardMain();
-		nbm.viewFx(root);
+		nbm.viewFx(root, dto);
 	}
 	public void logoutFunc() {
 		MainClass2 mc = new MainClass2();
@@ -71,6 +78,7 @@ public class MainController implements Initializable{
 	}
 	public void myImformation() {
 		infoMain im = new infoMain();
-		im.viewFx(root, id, name);
+		System.out.println(dto.getId());
+		im.viewFx(root, dto);
 	}
 }

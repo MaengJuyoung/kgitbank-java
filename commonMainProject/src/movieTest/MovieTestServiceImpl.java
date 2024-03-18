@@ -24,7 +24,6 @@ public class MovieTestServiceImpl implements MovieTestService{
 	public void setRoot(Parent root, testController ctrl) {
 		this.root = root;
 		this.ctrl = ctrl;
-		//aaa();
 	}
 	public MovieTestServiceImpl() {
 		try {

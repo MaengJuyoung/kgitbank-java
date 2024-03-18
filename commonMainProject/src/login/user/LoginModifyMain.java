@@ -2,6 +2,7 @@ package login.user;
 
 import java.net.URL;
 
+import commonMainProject.MainDTO;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,7 +11,7 @@ import login.url.URLService;
 
 public class LoginModifyMain {
 	
-	public void loginmodifymain(Parent root, String id) {
+	public void loginmodifymain(Parent root, String id, MainDTO dto) {
 		Stage mostage = (Stage)root.getScene().getWindow();
 		try {
 			URL url = new URL(URLService.fxPath+"modify/fxml/modifyFx.fxml");
@@ -19,7 +20,7 @@ public class LoginModifyMain {
 			
 			ModifyController ctrl = loader.getController();
 			
-			ctrl.SetRoot(root, id);
+			ctrl.SetRoot(root, id, dto);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

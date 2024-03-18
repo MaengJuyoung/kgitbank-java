@@ -5,6 +5,7 @@ import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 import commonMainProject.MainClass2;
+import commonMainProject.MainClass5;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -82,7 +83,7 @@ public class cgvController implements Initializable{
 		this.rdto = rdto;
 	}
 	public void backButton() {
-		MainClass2 mc = new MainClass2();
+		MainClass5 mc = new MainClass5();
 		mc.viewFx(root);
 	}
 }

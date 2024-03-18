@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import common.CommonService;
 import commonMainProject.MainClass;
 import commonMainProject.MainClass5;
+import commonMainProject.MainDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -18,8 +19,14 @@ public class DeleteController implements Initializable{
 	Parent root;
 	ModifyService ms;
 	String path;
+	MainDTO dto;
 	public void setRoot(Parent root) {
 		this.root = root;
+	}
+	public void setRoot2(Parent root, MainDTO dto) {
+		this.root = root;
+		this.dto = dto;
+		System.out.println(dto.getId());
 	}
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ms = new ModifyImpl();
@@ -41,7 +48,8 @@ public class DeleteController implements Initializable{
 
 	public void backButton() {
 		infoMain2 mc = new infoMain2();
-		mc.viewFx(root);
+		System.out.println(dto.getId());
+		mc.viewFx(root, dto);
 	}
 	
 }

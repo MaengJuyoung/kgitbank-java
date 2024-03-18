@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import common.CommonService;
 import commonMainProject.MainClass5;
+import commonMainProject.MainDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -16,13 +17,15 @@ import myInfo.infoMain2;
 public class ModifyController implements Initializable {
 	@FXML public TextField modiName, modiEmail;
 	@FXML public PasswordField modiPwd;
+	MainDTO dto;
 	Parent root;
 	ModifyService ms;
 	String id;
-	public void SetRoot(Parent root, String id) {
+	public void SetRoot(Parent root, String id, MainDTO dto) {
 		ms.setRoot(root);
 		this.root = root;
 		this.id = id;
+		this.dto = dto;
 	}
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		ms = new ModifyImpl();
@@ -40,7 +43,8 @@ public class ModifyController implements Initializable {
 	}
 	public void backButton() {
 		infoMain2 mc = new infoMain2();
-		mc.viewFx(root);
+		System.out.println(dto.getId());
+		mc.viewFx(root, dto);
 	}
 	
 }
