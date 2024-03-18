@@ -1,9 +1,17 @@
 package login.dto;
 
 public class LoginDTO {
-	private String id,pwd,name;
-	public LoginDTO(String id, String pwd, String name) {
-		this.id = id; this.pwd= pwd; this.name=name; 
+	private String id,pwd,name, email;
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public LoginDTO(String id, String pwd, String name, String email) {
+		this.id = id; this.pwd= pwd; this.name=name; this.email = email;
 	}
 
 	public String getId() {

@@ -8,8 +8,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import reserve.dto.ReserveDTO;
 
-public class MainClass3 {
-	public void viewFx(Parent root, ReserveDTO rdto) {
+public class MainClass3 {		
+	public void viewFx(Parent root, ReserveDTO rdto) {		// 예매 정보 가져오기
 		Stage stage = (Stage)root.getScene().getWindow(); 
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("mainFX.fxml"));

@@ -30,8 +30,6 @@ public class LoginServiceImpl implements LoginService{
 
 		LoginDTO dto = dao.getUser(fxId.getText());
 
-		System.out.println("dto : " + dto);
-
 		String msg = null;
 		String id = fxId.getText();
 
@@ -41,7 +39,7 @@ public class LoginServiceImpl implements LoginService{
 				System.out.println(root);
 				msg = dto.getName() +"님이 로그인 하셨습니다.";
 				MainClass4 mc = new MainClass4();
-				mc.viewFx(root, id, dto.getName());
+				mc.viewFx(root, id, dto.getName(), dto.getEmail());
 
 			}else {
 				msg = "비밀번호 틀림";

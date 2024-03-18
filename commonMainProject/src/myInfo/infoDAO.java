@@ -22,20 +22,20 @@ public class infoDAO {
 			e.printStackTrace();
 		}
 	}
-	public String aaa(String userId) {
+	public LoginDTO aaa(String userId) {
 		String sql = "select * from login_fx where id ='" + userId+ "'";
 		LoginDTO dto = null;
-		String a = "xodud5080@naver.com";
+		//String a = "xodud5080@naver.com";
 			try {
 			ps=con.prepareStatement(sql);
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				//dto = new LoginDTO(rs.getString("id"),rs.getString("pwd"),rs.getString("name"), rs.getString("email"));
-				a = rs.getString("email");
+				dto = new LoginDTO(rs.getString("id"),rs.getString("pwd"),rs.getString("name"), rs.getString("email"));
+				//a = rs.getString("email");
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return a;
+		return dto;
 	}
 }

@@ -4,14 +4,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import common.CommonService;
-import commonMainProject.MainClass5;
 import commonMainProject.MainDTO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import login.main.MainClass2;
 import myInfo.infoMain2;
 
 public class ModifyController implements Initializable {
@@ -31,7 +29,7 @@ public class ModifyController implements Initializable {
 		ms = new ModifyImpl();
 	}
 	public void btnModi() {
-		ms.modiId(modiPwd.getText(),modiName.getText(),modiEmail.getText(), id);
+		ms.modiId(modiPwd.getText(),modiName.getText(),modiEmail.getText(), id, dto);
 		
 		int a = ms.modi();
 		

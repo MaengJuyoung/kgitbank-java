@@ -44,7 +44,11 @@ public class infoController implements Initializable{
 				Platform.runLater(()->{
 					name.setText(dto.getName());
 					id.setText(dto.getId());
-					email.setText(dao.aaa(id2));
+					email.setText(dto.getEmail());
+					System.out.println(dto);
+					System.out.println(dto.getId());
+					System.out.println(dto.getEmail());
+					
 				});
 			}
 		};

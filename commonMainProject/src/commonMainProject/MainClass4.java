@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainClass4 {
-	public void viewFx(Parent root, String id, String name) {
+	public void viewFx(Parent root, String id, String name, String email) {
 		Stage stage = (Stage)root.getScene().getWindow(); 
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("mainFX.fxml"));
@@ -16,7 +16,7 @@ public class MainClass4 {
 			
 			MainController ctrl = loader.getController();
 			ctrl.setRoot(root);
-			ctrl.setRoot2(id, name);
+			ctrl.setRoot2(id, name, email);
 			
 		} catch (IOException e) {
 			e.printStackTrace();

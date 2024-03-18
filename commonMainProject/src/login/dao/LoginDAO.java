@@ -36,7 +36,7 @@ public class LoginDAO {
 			ps=con.prepareStatement(sql);
 			rs=ps.executeQuery();
 			if(rs.next()) {
-				dto = new LoginDTO(rs.getString("id"),rs.getString("pwd"),rs.getString("name"));
+				dto = new LoginDTO(rs.getString("id"),rs.getString("pwd"),rs.getString("name"), rs.getString("email"));
 
 			}
 		} catch (Exception e) {

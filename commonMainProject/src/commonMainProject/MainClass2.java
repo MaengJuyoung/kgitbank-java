@@ -8,7 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MainClass2 {
-	public void viewFx(Parent root, MainDTO dto) {
+	public void viewFx(Parent root, MainDTO dto) {		// 로그인 정보 가져오기
 		Stage stage = (Stage)root.getScene().getWindow(); 
 		
 		try {

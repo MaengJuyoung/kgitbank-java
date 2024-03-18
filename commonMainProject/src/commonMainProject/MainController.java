@@ -39,12 +39,13 @@ public class MainController implements Initializable{
 		thread.start();
 		
 	}
-	public void setRoot2(String id, String name) {
+	public void setRoot2(String id, String name, String email) {
 		this.id = id;
 		this.name = name;
 		//MainDTO dto = new MainDTO();
 		dto.setId(id);
 		dto.setName(name);
+		dto.setEmail(email);
 		System.out.println(dto.getId());
 	}
 	public void setRoot(Parent root) {

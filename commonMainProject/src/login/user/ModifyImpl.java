@@ -3,6 +3,7 @@ package login.user;
 import java.util.ArrayList;
 
 import common.CommonService;
+import commonMainProject.MainDTO;
 import javafx.scene.Parent;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -23,6 +24,8 @@ public class ModifyImpl implements ModifyService {
 	String email2;
 	String pwd3; String name3; String email3;
 	String id3;
+	MainDTO mdto;
+	
 	public ModifyImpl() {
 		dao = new MemberDAO();
 		arr = new ArrayList<>();
@@ -60,11 +63,12 @@ public class ModifyImpl implements ModifyService {
 	public void btnModi() {
 		
 	}
-	public void modiId( String pwd, String name, String email, String id) {
-		this.pwd3 = pwd;
-		this.name3 = name;
-		this.email3 = email;
-		this.id3 = id;
+	public void modiId( String pwd, String name, String email, String id, MainDTO dto) {
+		this.mdto = dto;
+		this.pwd3 = pwd;		mdto.setPwd(pwd);
+		this.name3 = name;		mdto.setName(name);
+		this.email3 = email;	mdto.setEmail(email);
+		this.id3 = id;		
 	}
 	public int modi() {
 		int result = dao.modify(pwd3, name3, email3, id3);
